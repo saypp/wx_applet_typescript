@@ -1,0 +1,132 @@
+<button bindtap="clickTo" class="btn">点击跳转</button>
+<view>{{hint}}</view>
+
+<view class="section">
+    <input  type="password"  bindinput="getInputValue"  placeholder="这是一个可以自动聚焦的input" auto-focus />
+    <view>你输入的是：{{inputValue}}</view>
+</view>
+
+<checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}" wx:key="{{index}}">
+        <checkbox value="{{item.name}}"  checked="{{item.checked}}"></checkbox>
+        {{item.value}}
+    </label>
+</checkbox-group>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section section_gap">
+        <view class="section_title">switch</view>
+        <switch name="switch"></switch>
+    </view>
+
+    <view class="section section_gap">
+        <view class="section_title">slider</view>
+        <slider name="slider" show-value></slider>
+    </view>
+
+    <view class="section">
+        <view class="section_title">input</view>
+        <input type="text" name="input" placeholder="please input here" />
+    </view>
+
+    <view class="section section_gap">
+        <view class="section_title">radio</view>
+        <radio-group name="radio-group">
+            <label>
+                <radio value="radio1"></radio>
+                radio1
+            </label>
+            <label>
+                <radio value="radio2"></radio>
+                radio2
+            </label>
+        </radio-group>
+    </view>
+
+    <view class="section section_gap">
+        <view class="section_title">checkbox</view>
+        <checkbox-group name="checkbox">
+            <label>
+                <checkbox value="checkbox1"></checkbox>
+                checkbox1
+            </label>
+            <label>
+                <checkbox value="checkbox2"></checkbox>
+                checkbox2
+            </label>
+        </checkbox-group>
+    </view>
+
+    <view class="btn-area">
+        <button form-type="submit">Submit</button>
+        <button form-type="reset">Reset</button>
+    </view>
+</form>
+
+<view class="section">
+    <view class="section_title">普通选择器</view>
+    <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+            当前选择：{{array[index]}}
+        </view>
+    </picker>
+</view>
+
+<view class="section">
+    <view class="section_title">多列选择器</view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker">
+            当前选择：{{multiArray[0][multiIndex[0]]}}, {{multiArray[1][multiIndex[1]]}}, {{multiArray[2][multiIndex[2]]}}
+        </view>
+    </picker>
+</view>
+
+<view class="section">
+    <view class="section_title">事件选择器</view>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+            当前选择： {{time}}
+        </view>
+    </picker>
+</view>
+
+<view class="section">
+    <view class="section_title">日期选择器</view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">
+            当前选择： {{date}}
+        </view>
+    </picker>
+</view>
+
+<view class="section">
+    <view class="section_title">省市区选择器</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+            当前选择： {{region[0]}}, {{region[1]}}, {{region[2]}}
+        </view>
+    </picker>
+</view>
+
+
+<view>
+    <view>{{year}}年{{month}}月{{day}}日</view>
+    <picker-view indicator-style="height:100rpx;" style="width:100%;height:600rpx;" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+            <view wx:for="{{years}}" wx:key="{{index}}" style="line-height:100rpx;">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{months}}" wx:key="{{index}}" style="line-height:100rpx;">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{days}}" wx:key="{{index}}" style="line-height:100rpx;">{{item}}年</view>
+        </picker-view-column>
+    </picker-view>
+</view>
+
+<view class="btn-area">
+    <navigator url="/pages/home?title=home" hover-class="navigator-hover">跳转到新页面</navigator>
+</view>
+
+
+

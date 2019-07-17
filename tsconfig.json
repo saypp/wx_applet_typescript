@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs",
+    "target": "es5",
+    "baseUrl": "./src/scripts/page", //disable baseUrl to get relative import path
+    "moduleResolution": "classic",
+    "outDir": "wxapp",
+    "allowJs": true
+  },
+  "compileOnSave": false,
+  "types": [
+    "es6-promise"
+  ],
+  "include": [
+    "src/scripts"
+  ]
+}

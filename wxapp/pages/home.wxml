@@ -1,0 +1,4 @@
+<view>
+  <text>{{hint}}</text>
+  <button bindtap="clickTo" class="btn">点击跳转</button>
+</view>

@@ -1,0 +1,35 @@
+<template name="number">
+    <block wx:if="{{pic=='1'}}">
+        <image src="{{templateDatas.assetsDir}}/store/one.png" class="one"/>
+    </block>
+    <block wx:if="{{pic=='2'}}">
+        <image src="{{templateDatas.assetsDir}}/store/two.png"/>
+    </block>
+    <block wx:if="{{pic=='3'}}">
+        <image src="{{templateDatas.assetsDir}}/store/three.png"/>
+    </block>
+    <block wx:if="{{pic=='4'}}">
+        <image src="{{templateDatas.assetsDir}}/store/four.png"/>
+    </block>
+    <block wx:if="{{pic=='5'}}">
+        <image src="{{templateDatas.assetsDir}}/store/five.png"/>
+    </block>
+    <block wx:if="{{pic=='6'}}">
+        <image src="{{templateDatas.assetsDir}}/store/six.png"/>
+    </block>
+    <block wx:if="{{pic=='7'}}">
+        <image src="{{templateDatas.assetsDir}}/store/seven.png"/>
+    </block>
+    <block wx:if="{{pic=='8'}}">
+        <image src="{{templateDatas.assetsDir}}/store/eight.png"/>
+    </block>
+    <block wx:if="{{pic=='9'}}">
+        <image src="{{templateDatas.assetsDir}}/store/nine.png"/>
+    </block>
+    <block wx:if="{{pic=='0'}}">
+        <image src="{{templateDatas.assetsDir}}/store/zero.png"/>
+    </block>
+    <block wx:if="{{pic=='.'}}">
+        <image src="{{templateDatas.assetsDir}}/store/point.png" class="point" />
+    </block>
+</template>

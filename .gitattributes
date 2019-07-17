@@ -1,0 +1,23 @@
+* text eol=lf
+
+# ignore compiled
+lib/**/* -text
+web/**/* -text
+build/**/* -text
+wxapp/**/*.js -text
+wxapp/**/*.wxss -text
+
+#ignore res dir
+src/imgs/**/* -text
+
+# Denote all files that are truly binary and should not be modified.
+# imgs
+*.png binary
+*.jpg binary
+*.svg binary
+*.gif binary
+*.jpeg binary
+# fonts
+*.ttf binary
+*.eot binary
+*.woff binary

@@ -1,0 +1,122 @@
+module.exports.parseCurrency = function (serverPrice) {
+  // if (!serverPrice && serverPrice !== 0) {
+  //   return "";
+  // }
+  // if (serverPrice % 100 === 0) {
+  //   return (serverPrice / 100).toFixed(0);
+  // } else if (serverPrice % 10 === 0) {
+  //   return (serverPrice / 100).toFixed(1);
+  // } else {
+  //   return (serverPrice / 100).toFixed(2);
+  // }
+}
+
+// module.exports.parseTime = function (time, format) {
+//   if (format === undefined) {
+//     format = "Y-M-D h:i"
+//   }
+//   // keys = "Y","M","D","d","h","m","s","c"
+//   if (!time) return "";
+//   if (typeof time === "number") {
+//     time = utils.normalizeTime(time);
+//   }
+//   let arr = format.split("");
+//   let date = new Date(time);
+//   for (let index = 0; index < arr.length; index++) {
+//     let value = arr[index]
+//     switch (value) {
+//       case "Y": arr[index] = date.getFullYear() - 2000; break;
+//       case "M": arr[index] = date.getMonth() + 1; break;
+//       case "D": arr[index] = date.getDate(); break;
+//       case "y": arr[index] = date.getFullYear(); break;
+//       case "m":
+//         let m = date.getMonth() + 1;
+//         arr[index] = m < 10 ? `0${m}` : m.toString();
+//         break;
+//       case "d":
+//         let d = date.getDate();
+//         arr[index] = d < 10 ? `0${d}` : d.toString();
+//         break;
+//       case "w":
+//         let w = date.getDay();
+//         switch (w) {
+//           case 1: arr[index] = "一"; break;
+//           case 2: arr[index] = "二"; break;
+//           case 3: arr[index] = "三"; break;
+//           case 4: arr[index] = "四"; break;
+//           case 5: arr[index] = "五"; break;
+//           case 6: arr[index] = "六"; break;
+//           case 0: arr[index] = "日"; break;
+//         };
+//         break;
+//       case "h":
+//         arr[index] = date.getHours().toString();
+//         while (arr[index].length < 2) {
+//           arr[index] = "0" + arr[index];
+//         }
+//         break;
+//       case "i":
+//         arr[index] = date.getMinutes().toString();
+//         while (arr[index].length < 2) {
+//           arr[index] = "0" + arr[index];
+//         }
+//         break;
+//       case "s":
+//         arr[index] = date.getSeconds().toString();
+//         while (arr[index].length < 2) {
+//           arr[index] = "0" + arr[index];
+//         }
+//         break;
+//       case "c":
+//         arr[index] = date.getMilliseconds().toString();
+//         while (arr[index].length < 3) {
+//           arr[index] = "0" + arr[index];
+//         }
+//         break;
+//     }
+//   }
+//   return arr.join("");
+// }
+
+// module.exports.timeFromNow = function (time, detailed) {
+//   if (detailed === undefined) {
+//     detailed = false;
+//   }
+//   let dateTime;
+//   if (time instanceof Date) {
+//     dateTime = time;
+//   } else {
+//     dateTime = new Date(utils.normalizeTime(time));
+//   }
+//   let now = new Date().getTime();
+//   let d = now - dateTime.getTime();
+//   let thatday = utils.parseTime(dateTime, "YMD");
+//   let today = utils.parseTime(now, "YMD");
+//   let yesterday = utils.parseTime(now - 24 * 3600 * 1000, "YMD");
+//   if (dateTime.getFullYear() !== new Date().getFullYear()) {
+//     // 不是今年
+//     if (detailed) {
+//       return utils.parseTime(dateTime, "Y-M-D h:i");
+//     } else {
+//       return utils.parseTime(dateTime, "M月D日");
+//     }
+//   }
+//   if (thatday !== today && thatday !== yesterday) {
+//     // 昨天以前
+//     if (detailed) {
+//       return utils.parseTime(dateTime, "Y-M-D h:i");
+//     } else {
+//       return utils.parseTime(dateTime, "M月D日");
+//     }
+//   }
+//   if (thatday === yesterday) {
+//     return `昨天${utils.parseTime(dateTime, "h:i")}`;
+//   }
+//   if (d > 3600 * 1000) {
+//     return `${Math.floor(d / 1000 / 60 / 60)}小时前`;
+//   }
+//   if (d > 60 * 1000) {
+//     return `${Math.floor(d / 1000 / 60)}分钟前`;
+//   }
+//   return "刚刚";
+// }

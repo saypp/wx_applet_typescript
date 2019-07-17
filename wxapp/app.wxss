@@ -1,0 +1,237 @@
+.ib {
+  display: inline-block;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.input-placeholder,
+.textarea-placeholder {
+  color: #a0a0a0;
+}
+page {
+  font-size: 28rpx;
+  color: #444;
+  text-align: left;
+}
+view,
+text,
+image,
+navigator,
+input,
+textarea {
+  box-sizing: border-box;
+  font-family: spec !important;
+}
+.cell-placeholder {
+  font-size: 24rpx;
+  color: #a0a0a0;
+}
+.cell-hover {
+  background: #fafafa;
+}
+.cell-group {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 76rpx;
+}
+.info-cell {
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 95rpx;
+  padding: 0 40rpx;
+  position: relative;
+  line-height: 95rpx;
+}
+.info-cell .cell-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.info-cell .cell-label {
+  line-height: 95rpx;
+  font-size: 26rpx;
+  color: #7A8082;
+}
+.info-cell .cell-text {
+  flex: 1;
+  text-align: right;
+  font-size: 26rpx;
+}
+.info-cell .cell-arrow {
+  width: 32rpx;
+  height: 32rpx;
+  padding-left: 15rpx;
+}
+.info-cell.border + .info-cell.border {
+  border-top: 1px solid #f8f8f8;
+}
+.input-cell {
+  background: white;
+  width: 100%;
+  display: block;
+  min-height: 95rpx;
+  position: relative;
+  line-height: 95rpx;
+}
+.input-cell .cell-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  line-height: 95rpx;
+  font-size: 26rpx;
+  color: #7A8082;
+  z-index: 1;
+}
+.input-cell input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  height: 95rpx;
+  line-height: 95rpx;
+  text-align: right;
+}
+.input-cell + .input-cell {
+  border-top: 1px solid #f8f8f8;
+}
+.btn-white {
+  border: 1px solid #f2f2f2 !important;
+  background: white !important;
+  color: #7A8082 !important;
+}
+.btn-white-hover {
+  background: #f8f8f8 !important;
+}
+.btn-mainred {
+  border: 1px solid #f66067 !important;
+  background: #f66067 !important;
+  color: white;
+}
+.btn-mainred-hover {
+  background: #e64052 !important;
+  border-color: #e64052 !important;
+}
+.order-status-text.blue {
+  color: #8ed8ff;
+}
+.order-status-text.red {
+  color: #fc6767;
+}
+.order-status-text.gray {
+  color: #999;
+}
+.order-status-text.orange {
+  color: #fdc592;
+}
+.order-status-text.green {
+  color: #a2e385;
+}
+#modal {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  top: 0;
+  background: rgba(15, 15, 15, 0.5);
+  z-index: 10;
+}
+#modal button {
+  border-radius: 0;
+  display: inline-block;
+  padding: 0 40rpx;
+  margin: 0;
+  font-size: 28rpx;
+  background: transparent;
+  border: none;
+  height: auto;
+  line-height: inherit;
+}
+#modal button::after {
+  display: none !important;
+}
+#modal .modal-content {
+  width: 620rpx;
+  height: 552rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+#modal .modal-content .modal-frame {
+  width: 620rpx;
+  height: 553rpx;
+  position: absolute;
+  top: 0;
+}
+#modal .modal-content .hint-icon {
+  width: 184rpx;
+  height: 184rpx;
+  position: absolute;
+  top: -90rpx;
+  left: 220rpx;
+}
+#modal .modal-content text {
+  position: relative;
+  z-index: 11;
+  font-size: 37rpx;
+  display: block;
+  text-align: center;
+  margin-top: 200rpx;
+}
+#modal .btn {
+  display: block;
+  width: 620rpx;
+  padding: 0 50rpx;
+  margin-top: 150rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+#modal .btn button {
+  width: 220rpx;
+  height: 102rpx;
+  position: relative;
+  z-index: 11;
+  text-align: center;
+  line-height: 102rpx;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+}
+#modal .btn button:nth-child(2) {
+  margin-left: 80rpx;
+}
+#modal .btn button.long-btn {
+  width: 344rpx;
+}
+#modal .btn button.long-btn image {
+  width: 334rpx;
+}
+#modal .btn image {
+  width: 220rpx;
+  height: 102rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+#modal .btn text {
+  position: relative;
+  z-index: 12;
+  margin-top: 0;
+  color: #806E5A;
+  font-size: 48rpx;
+}

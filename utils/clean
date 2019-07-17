@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "clean pages..."
+cd $ROOT/wxapp/pages
+ls -p | grep -v "/" | grep -v ".json" | xargs rm
+
+echo "clean base..."
+cd $ROOT/wxapp/base
+ls -p | grep -v "/" | xargs rm
+
+echo "clean helpers..."
+cd $ROOT/wxapp/helpers
+ls -p | grep -v "/" | xargs rm
+
+echo "clean modules..."
+cd $ROOT/wxapp/modules
+ls -p | grep -v "/" | xargs rm
+
+echo "clean partials..."
+cd $ROOT/wxapp/partials
+ls -p | grep -v "/" | xargs rm
+
+echo "clean files in root..."
+cd $ROOT
+ls -p wxapp/ | grep -v "/" | grep -v "app." | xargs -I {} rm wxapp/{}
+
+echo "clean complete!"

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+version=$1
+if [[ -z $version ]]; then
+  echo "请输入版本号! 如 0.0.1"
+  exit;
+fi
+
+git tag $version
+git push origin $version:$version
+

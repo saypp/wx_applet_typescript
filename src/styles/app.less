@@ -1,0 +1,149 @@
+@import (reference) "base/mixins";
+@import (reference) "base/variables";
+
+.ib {
+  display: inline-block;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.input-placeholder,
+.textarea-placeholder {
+  color: #a0a0a0;
+}
+
+page {
+  font-size: 28*@rpx;
+  color: #444;
+  text-align: left;
+}
+
+view, text, image, navigator, input, textarea {
+  box-sizing: border-box;
+  font-family: spec !important;
+}
+
+// cells
+.cell-placeholder {
+  font-size: 24*@rpx;
+  color: #a0a0a0;
+}
+
+
+.cell-hover {
+  background: @color-hover;
+}
+
+.cell-group {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 76*@rpx;
+}
+
+.info-cell {
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: @height-cell;
+  padding: 0 @padding-cell-side;
+  position: relative;
+  line-height: @height-cell;
+  .cell-icon {
+    width: 40*@rpx;
+    height: 40*@rpx;
+  }
+  .cell-label {
+    line-height: @height-cell;
+    font-size: 26*@rpx;
+    color: @color-text-gray;
+  }
+  .cell-text {
+    flex: 1;
+    text-align: right;
+    font-size: 26*@rpx;
+  }
+  .cell-arrow {
+    .size(32*@rpx);
+    padding-left: 15*@rpx;
+  }
+  &.border+&.border {
+    border-top: 1px solid @color-bg;
+  }
+}
+
+&.input-cell {
+  background: white;
+  width: 100%;
+  display: block;
+  min-height: @height-cell; // padding: 0 35*@rpx;
+  position: relative;
+  line-height: @height-cell;
+  .cell-label {
+    .absolute(0);
+    line-height: @height-cell;
+    font-size: 26*@rpx;
+    color: @color-text-gray; // padding-left: @padding-cell-side;
+    z-index: 1;
+  }
+  input {
+    .absolute(0);
+    z-index: 2; // padding: 0 @padding-cell-side;
+    height: @height-cell;
+    line-height: @height-cell;
+    text-align: right;
+  }
+  &+& {
+    border-top: 1px solid @color-bg;
+  }
+}
+
+.btn-white {
+  //控制按钮的颜色
+  border: 1px solid @color-border !important;
+  background: white !important;
+  color: @color-text-gray !important;
+  &-hover {
+    background: @color-bg !important;
+  }
+}
+
+.btn-mainred {
+  //控制按钮的颜色
+  border: 1px solid @color-main-red !important;
+  background: @color-main-red !important;
+  color: white;
+  &-hover {
+    background: @color-main-red-hover !important;
+    border-color: @color-main-red-hover !important;
+  }
+}
+
+.order-status-text {
+  &.blue {
+    color: #8ed8ff;
+  }
+  &.red {
+    color: #fc6767;
+  }
+  &.gray {
+    color: #999;
+  }
+  &.orange {
+    color: #fdc592;
+  }
+  &.green {
+    color: #a2e385;
+  }
+}
+
+@commonColor: #806E5A;
+@import "partials/dialogs";

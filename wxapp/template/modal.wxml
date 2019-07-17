@@ -1,0 +1,25 @@
+<template name="showModal">
+  <view id="modal">
+    <view class="modal-content">
+      <image class="modal-frame" src="{{templateDatas.assetsDir}}/common/modal-frame.png" />
+      <image class="hint-icon" src="{{templateDatas.assetsDir}}/common/hint-icon.png" />
+      <text>{{title}}</text>
+      <form class="btn" report-submit bindsubmit="confirmQuit" bindreset="cancelQuit">
+        <block wx:if="{{confirmDialog}}">
+          <button hover-class='none' form-type="reset" wx:if="{{hasCancelBtn}}">
+              <image src="{{templateDatas.assetsDir}}/common/modal-btn-pink.png" />
+              <text>取消</text>
+          </button>
+          <button hover-class="none" form-type="submit"  class="{{!hasCancelBtn?'long-btn':''}}">
+              <image src="{{templateDatas.assetsDir}}/common/modal-btn-default.png" />
+              <text>确认</text>
+          </button>
+        </block>
+        <button hover-class="none" class="long-btn" form-type="submit" open-type="getPhoneNumber" wx:if="{{getPhoneNumber}}" bindgetphonenumber="getPhoneNumber">
+            <image src="{{templateDatas.assetsDir}}/common/modal-btn-default.png" />
+            <text>{{readytext}}</text>
+        </button>
+      </form>
+   </view>
+  </view>
+</template>

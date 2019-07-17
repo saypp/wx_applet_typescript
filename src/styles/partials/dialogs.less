@@ -1,0 +1,82 @@
+@import (reference) "../app";
+#modal {
+  position: fixed;
+  .size(100vw, 100%);
+  min-height: 100vh;
+  top: 0;
+  background: rgba(15, 15, 15, 0.5);
+  z-index: 10;
+  button {
+    .clear-default-btn-style;
+  }
+  .modal-content {
+    .size(620*@rpx, 552*@rpx);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    .modal-frame {
+      .size(620*@rpx, 553*@rpx);
+      position: absolute;
+      top: 0;
+    }
+    .hint-icon {
+      .size(184*@rpx, 184*@rpx);
+      position: absolute;
+      top: -90*@rpx;
+      left: 220*@rpx;
+    }
+    text {
+      position: relative;
+      z-index: 11;
+      font-size: 37*@rpx;
+      display: block;
+      text-align: center;
+      margin-top: 200*@rpx;
+    }
+  }
+  .btn {
+    display: block;
+    width: 620*@rpx;
+    padding: 0 50*@rpx;
+    margin-top: 150*@rpx;
+    box-sizing: border-box;
+    text-align: center;
+    button {
+      .size(220*@rpx, 102*@rpx);
+      position: relative;
+      z-index: 11;
+      text-align: center;
+      line-height: 102*@rpx;
+      border: none;
+      padding: 0;
+      display: inline-block;
+      margin: 0;
+      &:nth-child(2) {
+        margin-left: 80*@rpx;
+      }
+      &.long-btn {
+        width: 344*@rpx;
+        image {
+          width: 334*@rpx;
+        }
+      }
+    }
+    image {
+      .size(220*@rpx, 102*@rpx);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+    }
+    text {
+      position: relative;
+      z-index: 12;
+      margin-top: 0;
+      color: @commonColor;
+      font-size: 48*@rpx;
+    }
+  }
+}

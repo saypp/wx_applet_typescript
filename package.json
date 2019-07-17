@@ -1,0 +1,26 @@
+{
+  "name": "market-wxapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/gulp/bin/gulp",
+    "dev": "tsc --watch",
+    "server": "concurrently \"npm run start\" \"npm run dev\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/es6-promise": "0.0.32",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "tslint": "^5.14.0",
+    "typescript": "^2.6.2"
+  }
+}

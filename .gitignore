@@ -1,0 +1,8 @@
+node_modules
+app_backup
+.DS_Store
+src/scripts/base/localConfigs.ts
+wxapp/base/localConfigs.js
+wxapp/project.config.json
+wxapp/styles
+*.map

@@ -1,0 +1,15 @@
+{
+  "debug": false,
+  "pages": [  
+    "pages/index",
+    "pages/home"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarTitleText": "测试小程序",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#f8e4c4",
+    "backgroundColor": "#f8e4c4"
+  }
+}

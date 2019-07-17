@@ -1,0 +1,10 @@
+#!/bin/bash
+content=$1
+case "$OSTYPE" in
+  solaris*) echo "SOLARIS not supported";;
+  darwin*)  osascript -e "display notification \"$content\" with title \"Notification\"";;
+  linux*)   notify-send "$content" ; sleep 1.5 ; killall notify-osd;;
+  bsd*)     echo "BSD not supported" ;;
+  msys*)    echo "WINDOWS not supported" ;;
+  *)        echo "unknown: $OSTYPE" ;;
+esac

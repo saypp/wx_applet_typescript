@@ -1,0 +1,48 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "search.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/__pycache__": true,
+    "static/assets/js": true,
+    "static/assets/css": true,
+    "static/src/script/entries": true, //entry 文件都是由 gulp 自动生成，不需要手动编辑
+    "node_modules": true,
+    "wxapp/**/*.js": true,
+    "wxapp/**/*.wxml": true,
+    "wxapp/**/*.wxss": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/__pycache__": true,
+    "node_modules": true
+  },
+  "less.scannerExclude": [
+    "**/.git",
+    "**/node_modules",
+  ],
+  "less.showErrors": true,
+  "beautify.tabSize": 2,
+  "beautify.options": {
+    "indent_size": 2,
+    "preserve_newlines": true,
+    "newline_between_rules": true,
+    "selector_separator_newline": false
+  },
+  "python.pythonPath": "python3",
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "python.linting.pylintEnabled": false,
+  "files.associations": {
+    "*.wxml": "html",
+    "*.wxss": "css"
+  },
+  "tslint.autoFixOnSave": true,
+  "tslint.enable": true,
+  "tslint.configFile": "./tslint.json",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "tslint.suppressWhileTypeErrorsPresent": true
+}
